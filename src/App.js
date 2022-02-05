@@ -1,8 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import { useRef } from 'react';
-import octopuss from './images/octopuss.png';
-import octopuss2 from './images/octopuss2.jpg';
+import octopuss1 from './images/octopuss1.png';
+import heart from './images/heart.png';
+import club from './images/club.png';
+
 
 function App() {
   const refBox=useRef();
@@ -21,8 +23,13 @@ function App() {
     refBox.current.innerText=Number(refBox.current.innerText)*exchange;
   }
 
-  const imgChange=(i)=>{
-    i.target.src = octopuss2
+  const imgChange=(j)=>{
+    if (j.target.src.includes('octopuss')) {
+      j.target.src=heart
+    } else {
+      j.target.src=octopuss1
+    }
+      console.log(j.target.src)
   }
 
   const textChange=(e)=>{
@@ -36,7 +43,9 @@ function App() {
         <input onChange={textChange}/>
         <div ref={refBox} className='box' onClick={sum}>1</div>
         <button onClick={convert}>Convert</button>
-        <div><img alt='octo' src={octopuss} onClick={imgChange} className='image' /></div>
+        <div><img alt='octo' src={octopuss1} onClick={imgChange} className='image' /></div>
+        <div><img alt='octo' src={heart} onClick={imgChange} className='image' /></div>
+        <div><img alt='octo' src={club} onClick={imgChange} className='image' /></div>
       </header>                            
     </div>
   );
