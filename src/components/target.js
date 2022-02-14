@@ -3,7 +3,7 @@ import { useRef } from 'react';
 
 
 
-function Target() {
+function Changer() {
   const refBox=useRef();
   const exchange=20;
   
@@ -29,7 +29,7 @@ function Target() {
   return (
     <div > 
         
-        <div className='convert'>
+        <div className='changer'>
           <input onChange={textChange}/>
           <div ref={refBox} className='box' onClick={sum}>1</div>
           <button onClick={convert}>Convert</button>
@@ -38,4 +38,4 @@ function Target() {
   );
 }
 
-export default Target;
+export default Changer;

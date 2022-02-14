@@ -1,13 +1,4 @@
-body {
-  text-align: center;
-  background-color: #282c34;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  
-}
+
 
 .App-logo {
   height: 15vmin;
@@ -24,7 +15,7 @@ body {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -61,7 +52,7 @@ body {
   border:#61dafb solid 5px
   
 }
-.convert{
+.changer{
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -69,4 +60,37 @@ body {
   align-items: center;
   justify-content: center;
   border:#61dafb solid 5px
+}
+
+.match{
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:#61dafb solid 5px
+}
+
+ .memoContainer{
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border:#61dafb solid 5px
+}
+.memoLayout{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.memoCard{
+  margin: 20px;
+  padding: 20px;
+  border:#61dafb solid 5px;
+  width:170px
 }

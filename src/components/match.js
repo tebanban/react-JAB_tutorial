@@ -11,7 +11,7 @@ import alien8 from '../images/alien-pngrepo-com(8).png'
 import alien9 from '../images/alien-pngrepo-com(9).png'
                              
 
-function Memory() {
+function Match() {
     //const[pic,setPic]=useState(octopuss1);
     const pics=[alien1,alien2,alien3,alien4,alien5,alien6,alien7,alien8,alien9]
 
@@ -22,17 +22,18 @@ function Memory() {
 
 
   return (
-    <div>
-        <h3>Memory Game</h3>
-        <row>
+    <div className='match'>
+        <h3>Match Game</h3>
+        <div>
         <img alt='octo' src={octopuss1} onClick={imgChange1} className='image' />
         <img alt='octo' src={octopuss1} onClick={imgChange1} className='image' />
         <img alt='octo' src={octopuss1} onClick={imgChange1} className='image' />
         <img alt='octo' src={octopuss1} onClick={imgChange1} className='image' />
         <img alt='octo' src={octopuss1} onClick={imgChange1} className='image' />
-        </row>
+        </div>
+        
     </div>
   )
 }
 
-export default Memory
+export default Match
