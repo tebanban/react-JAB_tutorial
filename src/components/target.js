@@ -22,7 +22,7 @@ function Changer() {
   }
 
   const textChange=(e)=>{
-    refBox.current.innerText=e.target.value;
+    refBox.current.innerText=(e.target.value * exchange) ;
   }
 
   
@@ -30,6 +30,7 @@ function Changer() {
     <div > 
         
         <div className='changer'>
+        <div>useRef and e.target excercise</div>
           <input onChange={textChange}/>
           <div ref={refBox} className='box' onClick={sum}>1</div>
           <button onClick={convert}>Convert</button>

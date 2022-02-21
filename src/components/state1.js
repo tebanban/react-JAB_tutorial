@@ -7,9 +7,9 @@ function State1() {
    
     const changeName=()=>{
         setName(names[(Math.floor(Math.random() * (5 - 0)) + 0)]);
-        console.log(name)
+       
     }
-    console.log(`Inicio: ${name}`);           
+    //console.log(`Inicio: ${name}`);           
   return (
       <div>
         <div>{name}</div>
