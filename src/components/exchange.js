@@ -1,13 +1,13 @@
-import { useRef } from "react";
+import { useState } from "react";
 import "../App.css";
 
 const Exchange = () => {
-  const refBox=useRef();
-
+  const[result, setResult]=useState(0);
+  
   const cambios=[
     {
       moneda: "Euro",
-      cambio:1,
+      cambio:2.33,
     },{
       moneda: "Peso argentino",
       cambio:118.6,
@@ -24,15 +24,17 @@ const Exchange = () => {
   ]
 
 const euroConvert= (e)=>{
-  refBox.current.innerText=Number(refBox.current.innerText* 1)
+ 
+  setResult(e.target.value * cambios[0].cambio)
 }
 
   return (
-    <>
-        <label htmlFor="u0">Euro</label>
-        <input onChange={euroConvert}  id="u0" type="number"/> 
-        <div ref={refBox}>result</div>
-    </> 
+    <div>  
+        <h3>CURRENCY CONVERTER</h3>
+        <input onChange={euroConvert}  id="u0" type="number" />
+        <label htmlFor="u0" >{cambios[0].moneda}</label>
+        <input readOnly type="integer" value={result}></input>
+    </div> 
   )
 }
 

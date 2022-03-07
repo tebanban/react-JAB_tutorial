@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
 
 .App-logo {
   height: 15vmin;
@@ -92,4 +92,19 @@
   margin: 20px;
   padding: 20px;
   width:170px
+}
+
+label {
+  display: block;
+  font-family: 'Montserrat';
+}
+
+input {
+ width: 150px;
+ line-height: 60px;
+ text-align: right;
+ border-radius: 8px;
+ border: 1px dotted darkred;
+ /*outline: none;*/
+ font-size: 2rem;
 }
